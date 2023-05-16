@@ -96,3 +96,123 @@ To https://github.com/Dylan-Mugisha/Git-exercises.git
  - [deleted]         test
 kings-MacBook-Air:bundle1 king$ 
 ```
+
+### exercises 2
+```bash
+kings-MacBook-Air:bundle1 king$ # new exercises2 in bundle1
+kings-MacBook-Air:bundle1 king$ git add home.html
+kings-MacBook-Air:bundle1 king$ git stash
+Saved working directory and index state WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+kings-MacBook-Air:bundle1 king$ git stash list
+stash@{0}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+kings-MacBook-Air:bundle1 king$ git add about.html
+kings-MacBook-Air:bundle1 king$ git stash
+Saved working directory and index state WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+kings-MacBook-Air:bundle1 king$ git stash list
+stash@{0}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+stash@{1}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+kings-MacBook-Air:bundle1 king$ git stash
+No local changes to save
+kings-MacBook-Air:bundle1 king$ git add about.html
+kings-MacBook-Air:bundle1 king$ git stash
+Saved working directory and index state WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+kings-MacBook-Air:bundle1 king$ git stash list
+stash@{0}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+stash@{1}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+stash@{2}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+kings-MacBook-Air:bundle1 king$ git add team.html
+kings-MacBook-Air:bundle1 king$ git stash
+Saved working directory and index state WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+kings-MacBook-Air:bundle1 king$ git stash list
+stash@{0}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+stash@{1}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+stash@{2}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+stash@{3}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+kings-MacBook-Air:bundle1 king$ git stash pop stash@{1}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   about.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        team.html
+
+Dropped stash@{1} (c5facd25a5a07126997f0b2cd9d214ab5c32c78e)
+kings-MacBook-Air:bundle1 king$ git add team.html
+kings-MacBook-Air:bundle1 king$ git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   about.html
+        new file:   team.html
+
+kings-MacBook-Air:bundle1 king$ git stash list
+stash@{0}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+stash@{1}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+stash@{2}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+kings-MacBook-Air:bundle1 king$ git stash pop stash@{1}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   about.html
+        new file:   team.html
+
+Dropped stash@{1} (b8694147191a04c766f6c2015ff372accf2bd7f0)
+kings-MacBook-Air:bundle1 king$ git stash list
+stash@{0}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+stash@{1}: WIP on dev: 1175418 history in terminal of bundle1-exercises1 added
+kings-MacBook-Air:bundle1 king$ git stash pop stash@{1}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   about.html
+        new file:   home.html
+        new file:   team.html
+
+Dropped stash@{1} (fd7f4875e43e611a797b1a9d484d43752f4173a0)
+kings-MacBook-Air:bundle1 king$ git commi -m 'committing changes in ex-2'
+git: 'commi' is not a git command. See 'git --help'.
+
+The most similar commands are
+        commit
+        column
+        config
+kings-MacBook-Air:bundle1 king$ git commit -m 'committing changes in ex-2'
+[dev 39752ab] committing changes in ex-2
+ Committer: king <king@kings-MacBook-Air.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 36 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 team.html
+kings-MacBook-Air:bundle1 king$ git reset --hard
+HEAD is now at 39752ab committing changes in ex-2
+kings-MacBook-Air:bundle1 king$ git add --all
+kings-MacBook-Air:bundle1 king$ 
+.
+```
