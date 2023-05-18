@@ -216,3 +216,59 @@ kings-MacBook-Air:bundle1 king$ git add --all
 kings-MacBook-Air:bundle1 king$ 
 .
 ```
+
+## bundle-2 
+### exercises 1
+```bash
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+kings-MacBook-Air:bundle1 king$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+kings-MacBook-Air:bundle1 king$ git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+kings-MacBook-Air:bundle1 king$ git add service.html
+kings-MacBook-Air:bundle1 king$ git commit -m 'service.html created'
+[ft/bundle-2 8decc70] service.html created
+ Committer: king <king@kings-MacBook-Air.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 service.html
+kings-MacBook-Air:bundle1 king$ git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+kings-MacBook-Air:bundle1 king$  git push --set-upstream origin ft/bundle-2
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 277 bytes | 277.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Dylan-Mugisha/Git-exercises/pull/new/ft/bundle-2
+remote: 
+To https://github.com/Dylan-Mugisha/Git-exercises.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+Branch 'ft/bundle-2' set up to track remote branch 'ft/bundle-2' from 'origin'.
+kings-MacBook-Air:bundle1 king$ git push --set-upstream origin main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+Everything up-to-date
+kings-MacBook-Air:bundle1 king$ 
+```
